@@ -1,0 +1,45 @@
+import { useCallback, useEffect, useState } from 'react';
+import { getTeacherPerformance, getPerformanceRules, savePerformanceRules, savePerformanceRemarks } from '../lib/api';
+import { summarizePerformance, performanceGroups } from '../lib/teacherPerformance';
+import './AdminSyllabusDashboard.css';
+
+const fields = [['academic_year','Academic Year'],['period','Term'],['class_name','Class'],['section_name','Section'],['subject','Subject'],['teacher_user_id','Teacher'],['month','Month']];
+const termLabel = v => ({ TERM_1:'Term 1', TERM_2:'Term 2', FINAL:'Final', FULL_YEAR:'Full year' }[v] || v);
+export default function TeacherPerformancePage() {
+  const [data,setData] = useState({topics:[],remarks:[]});
+  const [rules,setRules] = useState({on_time:5,late:0});
+  const [filters,setFilters] = useState({});
+  const [query,setQuery] = useState('');
+  const [sort,setSort] = useState('teacher');
+  const [page,setPage] = useState(1);
+  const [detail,setDetail] = useState(null);
+  const [remarks,setRemarks] = useState('');
+  const [remarkYear,setRemarkYear] = useState('');
+  const [loading,setLoading] = useState(true);
+  const [busy,setBusy] = useState(false);
+  const [error,setError] = useState('');
+  const [message,setMessage] = useState('');
+  const load = useCallback(async () => { const [d,r] = await Promise.all([getTeacherPerformance(),getPerformanceRules()]); setData(d); setRules(r); },[]);
+  useEffect(() => { load().catch(e=>setError(e.message)).finally(()=>setLoading(false)); },[load]);
+  useEffect(() => { const refresh=()=>load().catch(e=>setError(e.message)); window.addEventListener('focus',refresh); return ()=>window.removeEventListener('focus',refresh); },[load]);
+  async function act(action,text) { setBusy(true);setError('');setMessage('');try { await action();await load();setMessage(text); } catch(e) {setError(e.message);} finally {setBusy(false);} }
+  const visible = data.topics.filter(t=>fields.every(([field])=>!filters[field] || String(t[field])===filters[field]) && `${t.teacher_name} ${t.subject} ${t.title}`.toLowerCase().includes(query.toLowerCase()));
+  const summary = summarizePerformance(visible);
+  const rows = performanceGroups(visible,t=>JSON.stringify([t.teacher_user_id,t.subject])).sort((a,b)=>sort==='teacher' ? a.topics[0].teacher_name.localeCompare(b.topics[0].teacher_name) : Number(b[sort])-Number(a[sort]));
+  const pages=Math.max(1,Math.ceil(rows.length/10));
+  const currentPage=Math.min(page,pages);
+  const details = detail ? visible.filter(t=>t.teacher_user_id===detail.teacher_user_id) : [];
+  const annual = detail ? data.topics.filter(t=>t.teacher_user_id===detail.teacher_user_id && t.academic_year===remarkYear) : [];
+  function selectYear(year,teacher=detail?.teacher_user_id) {setRemarkYear(year);setRemarks(data.remarks.find(r=>r.teacher_user_id===teacher && r.academic_year===year)?.remarks || '');}
+  return <div className="admin-syllabus-dashboard">
+    <header className="asd-header"><div><h1>Teacher Performance</h1><p>Completion records and annual appraisal evidence. Rating = on-time completion percentage ÷ 20 (out of 5).</p></div><button disabled={busy || loading} onClick={()=>act(async()=>{},'Performance refreshed.')}>Refresh</button></header>
+    {error && <p role="alert" className="asd-error">{error}</p>}{message && <p role="status" className="asd-success">{message}</p>}
+    {loading ? <p role="status">Loading teacher performance...</p> : <>
+      <div className="asd-filters"><label>Search<input value={query} onChange={e=>{setQuery(e.target.value);setPage(1);}} placeholder="Teacher, subject or topic"/></label>{fields.map(([field,label])=><label key={field}>{label}<select value={filters[field] || ''} onChange={e=>{setFilters({...filters,[field]:e.target.value});setPage(1);}}><option value="">All</option>{[...new Set(data.topics.map(t=>t[field]).filter(Boolean))].sort().map(v=><option key={v} value={v}>{field==='teacher_user_id' ? data.topics.find(t=>t[field]===v).teacher_name : termLabel(v)}</option>)}</select></label>)}<button onClick={()=>{setFilters({});setQuery('');setPage(1);}}>Clear filters</button></div>
+      <div className="asd-stats">{[['Overall Rating',summary.rating],['Total Points',summary.points],['On-Time Completion %',`${summary.percent}%`],['Late Completion',summary.late],['Topics Completed',summary.completed],['Topics Pending',summary.pending]].map(([label,value])=><div key={label}><strong>{value}</strong><span>{label}</span></div>)}</div>
+      <section className="asd-panel"><label>Sort by<select value={sort} onChange={e=>setSort(e.target.value)}><option value="teacher">Teacher name</option><option value="points">Points (highest first)</option><option value="percent">Rating (highest first)</option><option value="total">Topics (highest first)</option><option value="late">Late (highest first)</option></select></label><div className="asd-table-scroll"><table><thead><tr>{['Teacher','Subject','Topics','On Time','Late','Points','Rating','Action'].map(h=><th key={h}>{h}</th>)}</tr></thead><tbody>{rows.slice((currentPage-1)*10,currentPage*10).map(row=><tr key={row.id}><td>{row.topics[0].teacher_name}</td><td>{row.topics[0].subject}</td><td>{row.completed}/{row.total}</td><td>{row.onTime}</td><td>{row.late}</td><td>{row.points}</td><td>{row.rating}</td><td><button disabled={!row.topics[0].teacher_user_id} onClick={()=>{setDetail(row.topics[0]);selectYear(filters.academic_year || row.topics[0].academic_year,row.topics[0].teacher_user_id);}}>View Details</button></td></tr>)}{!rows.length && <tr><td colSpan={8}>No performance records match these filters.</td></tr>}</tbody></table></div><div className="asd-actions"><button disabled={currentPage===1} onClick={()=>setPage(currentPage-1)}>Previous</button><span>Page {currentPage} of {pages}</span><button disabled={currentPage===pages} onClick={()=>setPage(currentPage+1)}>Next</button></div></section>
+      <details className="asd-panel"><summary>Performance point rules</summary><p>New completions use these rules. Previously awarded points stay unchanged.</p><form onSubmit={e=>{e.preventDefault();if(window.confirm('Apply these point rules to future completions?')) act(()=>savePerformanceRules({onTime:Number(rules.on_time),late:Number(rules.late)}),'Point rules saved.');}}><div className="asd-filters">{[['on_time','On-time points'],['late','Late points']].map(([field,label])=><label key={field}>{label}<input required type="number" min="0" max="1000" step="1" value={rules[field]} onChange={e=>setRules({...rules,[field]:e.target.value})}/></label>)}<button disabled={busy}>Save rules</button></div></form></details>
+      {detail && <section className="asd-panel" aria-label="Teacher performance details"><header className="asd-header"><div><h2>{detail.teacher_name}</h2><p>{detail.employee_id} · {detail.email}</p></div><button onClick={()=>setDetail(null)}>Close details</button></header><p>Current filters: {details.length} total topics · {summarizePerformance(details).completed} completed · {summarizePerformance(details).onTime} on time · {summarizePerformance(details).late} late · {summarizePerformance(details).points} points · {summarizePerformance(details).rating}/5 rating</p><h3>Monthly performance</h3><div className="asd-table-scroll"><table><thead><tr>{['Month','Topics','Completed','On Time','Late','Points'].map(h=><th key={h}>{h}</th>)}</tr></thead><tbody>{performanceGroups(details,t=>t.month).sort((a,b)=>a.id.localeCompare(b.id)).map(r=><tr key={r.id}>{[r.id,r.total,r.completed,r.onTime,r.late,r.points].map((v,i)=><td key={i}>{v}</td>)}</tr>)}</tbody></table></div><h3>Topic completion history</h3><div className="asd-table-scroll"><table><thead><tr>{['Topic','Subject','Class / Section','Due','Completed (IST)','Outcome','Points'].map(h=><th key={h}>{h}</th>)}</tr></thead><tbody>{details.map(t=><tr key={t.id}><td>{t.title}</td><td>{t.subject}</td><td>{t.class_name} / {t.section_name}</td><td>{t.deadline}</td><td>{t.completed_at ? new Date(t.completed_at).toLocaleString('en-IN',{timeZone:'Asia/Kolkata'}) : 'Pending'}</td><td>{t.completion_status || 'Pending'}</td><td>{t.points}</td></tr>)}</tbody></table></div><h3>Annual performance summary</h3><label>Academic year<select value={remarkYear} onChange={e=>selectYear(e.target.value)}>{[...new Set(data.topics.filter(t=>t.teacher_user_id===detail.teacher_user_id).map(t=>t.academic_year))].map(y=><option key={y}>{y}</option>)}</select></label><p>{summarizePerformance(annual).completed}/{annual.length} topics completed · {summarizePerformance(annual).percent}% on time · {summarizePerformance(annual).points} points · {summarizePerformance(annual).rating}/5 rating</p><form onSubmit={e=>{e.preventDefault();act(()=>savePerformanceRemarks(detail.teacher_user_id,{academicYear:remarkYear,remarks}),'Admin remarks saved.');}}><label>Admin remarks<textarea rows={4} maxLength={4000} value={remarks} onChange={e=>setRemarks(e.target.value)}/></label><button disabled={busy}>Save remarks</button></form></section>}
+    </>}
+  </div>;
+}

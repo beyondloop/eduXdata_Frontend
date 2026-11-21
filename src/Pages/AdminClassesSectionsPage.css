@@ -1,0 +1,21 @@
+.class-section-page { display: grid; gap: 22px; color: #25324b; }
+.class-section-page h1 { margin: 0 0 8px; font-size: 26px; }
+.class-section-page h2 { margin: 0; font-size: 18px; }
+.class-section-page p { color: #667085; }
+.class-section-summary { display: flex; flex-wrap: wrap; gap: 18px; }
+.class-section-summary span { background: white; border: 1px solid #e4e7ec; border-radius: 12px; padding: 18px 24px; flex: 1; min-width: 170px; }
+.class-section-summary strong { display: block; font-size: 26px; color: #4f46e5; margin-bottom: 5px; }
+.class-section-form, .class-section-list { background: white; border: 1px solid #e4e7ec; border-radius: 14px; padding: 24px; }
+.class-section-form { display: flex; flex-wrap: wrap; align-items: end; gap: 18px; }
+.class-section-form h2 { flex-basis: 100%; }
+.class-section-form label { display: grid; gap: 8px; flex: 1; min-width: 170px; font-size: 14px; }
+.class-section-form input, .class-section-form select { padding: 11px 12px; border: 1px solid #d0d5dd; border-radius: 8px; font: inherit; background: white; width: 100%; }
+.class-section-form button { padding: 12px 20px; background: #4f46e5; color: white; border: 0; border-radius: 8px; cursor: pointer; }
+.class-section-form button:disabled { opacity: .55; cursor: default; }
+.class-section-list { overflow-x: auto; }
+.class-section-list table { width: 100%; border-collapse: collapse; margin-top: 18px; text-align: left; }
+.class-section-list th, .class-section-list td { padding: 14px; border-bottom: 1px solid #eaecf0; white-space: nowrap; }
+.class-section-list th { color: #667085; background: #f9fafb; font-size: 13px; }
+.class-section-status { color: #067647; background: #ecfdf3; border-radius: 20px; padding: 5px 10px; font-size: 12px; }
+.class-section-page .class-section-error { color: #b42318; margin: 0; }
+.class-section-page .class-section-success { color: #067647; margin: 0; }

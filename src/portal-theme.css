@@ -1,0 +1,162 @@
+/* Shared portal palette and readable type scale, based on the supplied dashboard. */
+:root {
+  --navy: #293b72;
+  --ink: #293b72;
+  --muted: #858eaa;
+  --line: #e1e5ed;
+  --blue: #5146bd;
+  --light: #e7ecef;
+  font-size: 18px;
+}
+
+body {
+  background: #e7ecef;
+  color: #293b72;
+  font-size: 16px;
+}
+
+.erp-app {
+  background: #e7ecef;
+  color: #293b72;
+}
+
+/* The reference uses a saturated blue-violet navigation rail and a cool gray work area. */
+.erp-app > .sidebar,
+.erp-app .sidebar.admin-sidebar {
+  color: #fff;
+  background: linear-gradient(180deg, #5146b9 0%, #5045b5 100%);
+  border-right: 0;
+  box-shadow: 5px 0 18px #37338a16;
+}
+
+.erp-app .sidebar .brand { border-bottom-color: #ffffff1c; }
+.erp-app .sidebar .brand strong,
+.erp-app .sidebar .brand span { color: #fff; background: none; -webkit-text-fill-color: #fff; }
+.erp-app .sidebar .brand-mark { background: #ff795e; box-shadow: none; }
+.erp-app .sidebar .colourful-switcher {
+  background: #ffffff16;
+  border-color: #ffffff28;
+  box-shadow: none;
+}
+.erp-app .sidebar .colourful-switcher small { color: #d3d0ff; }
+.erp-app .sidebar .colourful-switcher b { color: #fff; }
+.erp-app .sidebar .colourful-switcher .school-logo { background: #ff795e; color: #fff; box-shadow: none; }
+.erp-app .sidebar .nav-group > p { color: #cbc8f1; }
+.erp-app .sidebar .nav-item {
+  color: #e7e5ff;
+  border-color: transparent;
+  font-size: 13px;
+}
+.erp-app .sidebar .nav-item:hover,
+.erp-app .sidebar .nav-item.active {
+  color: #fff;
+  background: #ffffff20;
+  border-color: #ffffff18;
+  box-shadow: none;
+  transform: none;
+}
+.erp-app .sidebar .nav-item.active svg { color: #fff; filter: none; }
+.erp-app .sidebar .admin-submenu { border-left-color: #ffffff45; }
+.erp-app .sidebar .admin-submenu button { color: #e1dfff; font-size: 12px; }
+.erp-app .sidebar .admin-submenu button:hover,
+.erp-app .sidebar .admin-submenu button.active { color: #fff; background: #ffffff20; }
+.erp-app .sidebar .sidebar-bottom,
+.erp-app .sidebar .user-mini { border-color: #ffffff28; }
+.erp-app .sidebar .user-mini b { color: #fff; }
+.erp-app .sidebar .user-mini small { color: #d0cdf0; }
+.erp-app .sidebar .mobile-close { color: #fff; }
+
+.erp-app .main-area { background: #e7ecef; }
+.erp-app .topbar {
+  background: #e7ecef;
+  border-bottom-color: #dce2e7;
+  box-shadow: none;
+}
+.erp-app .crumb strong { color: #293b72; }
+.erp-app .page-content { color: #293b72; }
+.erp-app .panel,
+.erp-app .table-panel,
+.erp-app .student-360-card,
+.erp-app .student-metric { background-color: #fff; }
+
+/* Lift the compact labels and navigation text throughout pages and modules. */
+.erp-app .nav-item,
+.erp-app .admin-submenu button,
+.erp-app .crumb,
+.erp-app .module-context-sidebar nav button,
+.erp-app .module-context-settings,
+.erp-app .module-context-person b,
+.erp-app .module-context-person small,
+.erp-app .profile-signout {
+  font-size: 13px;
+}
+
+.erp-app .module-context-sidebar { background: linear-gradient(180deg, #071d2b 0%, #082333 100%); border-right-color: #173749; }
+
+/* Sidebar colors matched to the dark blue teal reference image. */
+.erp-app > .sidebar,
+.erp-app .sidebar.admin-sidebar,
+.erp-app .sidebar {
+  color: #e9f2f8;
+  background: linear-gradient(180deg, #071d2b 0%, #082333 100%);
+  border-right: 1px solid #173749;
+  box-shadow: 5px 0 18px #06172320;
+}
+.erp-app .sidebar .brand { border-bottom-color: #ffffff12; }
+.erp-app .sidebar .brand strong,
+.erp-app .sidebar .brand span { color: #f4f8fc; background: none; -webkit-text-fill-color: #f4f8fc; }
+.erp-app .sidebar .nav-group > p { color: #7893a7; }
+.erp-app .sidebar .nav-item { color: #829bb0; }
+.erp-app .sidebar .nav-item svg { color: #7490a5; }
+.erp-app .sidebar .nav-item:hover { color: #e5f4fb; background: #103246; }
+.erp-app .sidebar .nav-item.active { color: #f0f8fc; background: #123449; border-color: transparent; box-shadow: inset 3px 0 #36b9e8; }
+.erp-app .sidebar .nav-item.active svg { color: #54c8ed; }
+.erp-app .sidebar .admin-submenu button { color: #829bb0; }
+.erp-app .sidebar .admin-submenu button:hover,
+.erp-app .sidebar .admin-submenu button.active { color: #d7f2fc; background: #123449; }
+.erp-app .sidebar .admin-submenu { border-left-color: #ffffff20; }
+.erp-app .sidebar .admin-nav-chevron { color: #7893a7; }
+.erp-app .sidebar .colourful-switcher { background: #ffffff0a; border-color: #ffffff18; }
+.erp-app .sidebar .colourful-switcher small { color: #829bb0; }
+.erp-app .sidebar .colourful-switcher b { color: #e9f2f8; }
+.erp-app .sidebar .sidebar-bottom { background: #071d2b; border-color: #ffffff18; }
+.erp-app .sidebar .user-mini { border-color: #ffffff18; }
+.erp-app .sidebar .user-mini b { color: #e9f2f8; }
+.erp-app .sidebar .user-mini small { color: #829bb0; }
+.module-context-sidebar { background: linear-gradient(180deg, #071d2b 0%, #082333 100%); border-right-color: #173749; }
+.module-context-sidebar .module-context-back { color: #9ab0c1; }
+.module-context-sidebar .module-context-title { border-bottom-color: #ffffff18; }
+.module-context-sidebar .module-context-title small { color: #829bb0; }
+.module-context-sidebar .module-context-title b { color: #e9f2f8; }
+.erp-app .module-context-sidebar nav button { color: #829bb0; }
+.erp-app .module-context-sidebar nav button:hover,
+.erp-app .module-context-sidebar nav button.active { color: #e9f7fc; }
+.erp-app .module-context-sidebar nav button:hover { background: #103246; }
+.erp-app .module-context-sidebar nav button.active { background: #123449; border-color: #1d506a; }
+.module-context-sidebar nav button.active .module-context-dot { background: #54c8ed; box-shadow: 0 0 0 4px #54c8ed26; }
+.module-context-sidebar footer { border-top-color: #ffffff18; }
+.module-context-sidebar footer b { color: #e9f2f8; }
+.module-context-sidebar footer small { color: #829bb0; }
+.module-context-settings { background: #ffffff0a; border-color: #ffffff18; color: #a9c3d5; }
+.module-context-settings:hover, .module-context-settings.active { background: #123449; border-color: #1d506a; color: #e9f7fc; }
+.module-context-person b { color: #e9f2f8; }
+.module-context-person small { color: #829bb0; }
+
+/* Apply the same teal hover to every sidebar module and submenu. */
+.erp-app #portal-navigation .nav-item:not(.active):hover,
+.erp-app #portal-navigation .admin-submenu button:not(.active):hover,
+.erp-app .teacher-sidebar .nav-item:not(.active):hover,
+.erp-app .teacher-sidebar .portal-submenu-item:not(.active):hover,
+.erp-app .module-context-sidebar nav button:not(.active):hover,
+.erp-app .module-context-sidebar .module-context-settings:not(.active):hover {
+  color: #e5f4fb;
+  background: #103246;
+}
+.erp-app .module-context-sidebar .module-context-back:hover {
+  color: #e5f4fb;
+  background: #103246;
+}
+
+@media (max-width: 720px) {
+  :root { font-size: 17px; }
+}
