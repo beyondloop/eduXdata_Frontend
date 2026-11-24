@@ -1,0 +1,258 @@
+.syllabus-page{max-width:1200px;margin:auto;color:#334155;font-size:13px}.syllabus-page *{box-sizing:border-box}.syllabus-hero{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:30px;border:1px solid #dddff6;border-radius:22px;background:linear-gradient(120deg,#eeedff,#f0f9ff);margin-bottom:22px}.syllabus-eyebrow{display:flex;align-items:center;gap:8px;font-size:10px;font-weight:800;letter-spacing:1.4px;color:#6366bd}.syllabus-hero h1{font-size:28px;letter-spacing:-.8px;color:#263350;margin:10px 0}.syllabus-hero p,.syllabus-create>p,.syllabus-list-heading p{color:#718096;line-height:1.6;margin:5px 0}.syllabus-page button{cursor:pointer}.syllabus-page button:disabled{opacity:.5;cursor:not-allowed}.syllabus-primary,.syllabus-secondary{display:inline-flex;justify-content:center;align-items:center;gap:7px;border-radius:10px;padding:10px 14px;font-size:12px;font-weight:600;flex-shrink:0}.syllabus-primary{background:#605bd4;color:white;border:1px solid #605bd4}.syllabus-primary:hover:not(:disabled){background:#4f49bd}.syllabus-secondary{background:white;border:1px solid #dfe4ee;color:#52617a}.syllabus-secondary:hover:not(:disabled){background:#f6f7fc}.syllabus-alert{padding:13px 16px;border-radius:10px;margin-bottom:16px;overflow-wrap:anywhere}.syllabus-alert.error{background:#fff0f0;color:#b13745}.syllabus-alert.success{background:#eaf9f0;color:#267449}.syllabus-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-bottom:24px}.syllabus-stats>div{padding:20px;background:#fff;border:1px solid #e4e7f1;border-radius:16px}.syllabus-stats small{color:#778399}.syllabus-stats strong{display:block;font-size:28px;margin-top:8px;color:#344365}.syllabus-create{background:#fff;padding:25px;border:1px solid #dcdff1;border-radius:18px;margin-bottom:24px}.syllabus-page h2{font-size:18px;margin:0 0 8px;color:#2e3b57}.syllabus-create fieldset{border:0;margin:20px 0 0;padding:0;min-width:0}.syllabus-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.syllabus-page label{font-size:12px;font-weight:600}.syllabus-page input:not([type=checkbox]),.syllabus-page select,.syllabus-page textarea{display:block;width:100%;min-width:0;background:#fff;color:#334155;border:1px solid #dce2ee;border-radius:8px;padding:10px 11px;font:inherit;margin-top:6px}.syllabus-page textarea{resize:vertical}.syllabus-page input:focus,.syllabus-page select:focus,.syllabus-page textarea:focus{outline:2px solid #b8b6ef;outline-offset:1px}.syllabus-upload{display:flex;align-items:center;gap:14px;background:#f9faff;border:1px dashed #c7cdec;border-radius:12px;padding:18px;margin:20px 0;color:#5c63b6}.syllabus-upload span{flex:1}.syllabus-upload small{display:block;color:#8490a4;font-weight:400;margin-top:5px}.syllabus-upload input{max-width:280px;font-size:11px!important}.syllabus-topic-label{display:flex;align-items:center;justify-content:space-between}.syllabus-topic-label h3{font-size:14px}.syllabus-topic-label small{color:#8a94a8}.syllabus-topic-input{display:grid;grid-template-columns:24px 1fr 170px 30px;gap:12px;align-items:end;margin:12px 0}.syllabus-topic-input>span{align-self:center;color:#9ba5b8;padding-top:18px}.syllabus-icon-button{background:transparent;border:0;padding:10px 0;color:#8c96ab}.syllabus-form-footer{display:flex;justify-content:space-between;gap:12px;margin-top:22px}.syllabus-form-error{color:#b13745!important}.syllabus-list-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:16px}.syllabus-list-heading p{font-size:11px}.syllabus-filters{display:grid;grid-template-columns:1fr 160px 215px;gap:12px;margin-bottom:20px}.syllabus-filters input,.syllabus-filters select{margin:0!important}.syllabus-card{border:1px solid #e1e5f0;background:#fff;border-radius:18px;margin-bottom:20px;overflow:hidden}.syllabus-card-heading{display:flex;justify-content:space-between;align-items:center;padding:23px 24px 12px;gap:15px}.syllabus-class{color:#655fbd;font-size:11px;font-weight:600}.syllabus-card h3{font-size:18px;margin:8px 0;color:#33405e;overflow-wrap:anywhere}.syllabus-card-heading p{margin:0;color:#8390a3;font-size:12px}.syllabus-progress{display:flex;gap:15px;align-items:center;padding:0 24px 22px}.syllabus-progress progress{height:7px;flex:1;min-width:0;border:0;border-radius:20px;overflow:hidden;accent-color:#7973df;background:#eeeff8}.syllabus-progress progress::-webkit-progress-bar{background:#eeeff8;border-radius:20px}.syllabus-progress progress::-webkit-progress-value{background:#7973df;border-radius:20px}.syllabus-progress span{font-size:11px;color:#8a94a8}.syllabus-topic{padding:20px 24px;border-top:1px solid #eef0f6}.syllabus-topic-heading{display:flex;justify-content:space-between;align-items:start;gap:14px}.syllabus-topic h4{display:flex;align-items:center;gap:8px;font-size:14px;margin:0 0 8px;overflow-wrap:anywhere}.syllabus-topic h4 svg{color:#37a079;flex-shrink:0}.syllabus-deadline{display:flex;gap:5px;align-items:center;color:#8690a2;font-size:11px}.syllabus-status{border-radius:20px;padding:5px 9px;font-size:10px;font-weight:600;white-space:nowrap;background:#f0f2f7;color:#718096}.syllabus-status.in_progress{background:#eff0ff;color:#6860b7}.syllabus-status.overdue{background:#fff0ef;color:#c4564f}.syllabus-status.completed{background:#e9f8ef;color:#2c9264}.syllabus-status.completed_late{background:#fff4df;color:#a57524}.syllabus-completion{font-size:11px;color:#738198;margin:12px 0}.syllabus-text-button{border:0;background:transparent;padding:12px 0 0;font-size:11px;color:#6760c5}.syllabus-edit{display:flex;align-items:end;flex-wrap:wrap;gap:10px;margin:15px 0}.syllabus-edit label:first-child{flex:1;min-width:150px}.syllabus-complete-form{display:flex;align-items:center;justify-content:space-between;gap:12px;background:#f8f9fd;padding:12px;border-radius:10px;margin:15px 0}.syllabus-complete-form label{display:flex;align-items:center;gap:8px;font-weight:500}.syllabus-complete-form input{accent-color:#625bd4;width:16px;height:16px}.syllabus-notes{margin-top:16px}.syllabus-notes summary{cursor:pointer;font-size:12px;color:#596881}.syllabus-notes summary span{padding:2px 6px;background:#f0f2f8;border-radius:6px;margin-left:6px}.syllabus-notes summary small{margin-left:12px;font-size:10px;color:#929cae}.syllabus-notes ol{list-style:none;padding:0;margin:12px 0;max-height:350px;overflow:auto}.syllabus-notes li{padding:12px;background:#f8f9fc;border-radius:9px;margin-top:8px}.syllabus-notes li>div{display:flex;justify-content:space-between;gap:12px;font-size:10px;color:#8290a3}.syllabus-notes li b{color:#5b6880}.syllabus-notes li p{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.65;margin:8px 0 0;font-size:12px}.syllabus-no-notes{font-size:11px;color:#8b95a6}.syllabus-note-form{margin-top:16px}.syllabus-note-form>div{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:8px}.syllabus-note-form small{font-size:10px;color:#919bad}.syllabus-empty{text-align:center;padding:50px 20px;border:1px dashed #dce1ef;border-radius:18px;background:#ffffffa1;color:#8591a5}.syllabus-empty svg{color:#aaa7d5}.syllabus-empty h3{color:#596780;font-size:16px}.syllabus-empty p{font-size:12px;line-height:1.7}.syllabus-page button:focus-visible,.syllabus-page summary:focus-visible{outline:2px solid #8b84dc;outline-offset:3px}
+.syllabus-plan-modes{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap}
+.syllabus-plan-modes button{border:1px solid #dce1ee;border-radius:10px;background:white;color:#67748c;padding:11px 16px;font-size:12px}
+.syllabus-plan-modes button[aria-pressed=true]{background:#625bd4;color:white;border-color:#625bd4}
+.annual-period{margin-top:16px;padding:12px;border-radius:9px;background:#f0efff;color:#655cb7;font-size:12px}
+.annual-help{color:#7a869c;line-height:1.7;font-size:12px}
+.annual-subject-selection{padding:16px;border:1px solid #dedff0;border-radius:12px;margin:16px 0;background:#fafaff}
+.annual-subject-selection>div{display:flex;flex-wrap:wrap;gap:14px;margin:12px 0}
+.annual-subject-selection label{display:flex;align-items:center;gap:6px}
+.annual-subject-selection input{accent-color:#625bd4}
+.annual-subject-selection small{color:#8190a4;font-size:11px}
+.annual-extraction-message{padding:12px;background:#eef5ff;border-radius:9px;line-height:1.6;color:#596e99;font-size:12px}
+.syllabus-term-filter{display:block;max-width:250px;margin-bottom:18px}
+.annual-subject{border:1px solid #e1e5f0;border-radius:12px;margin:14px 0;overflow:hidden}
+.annual-subject>summary{cursor:pointer;background:#f7f8fd;padding:17px;color:#425170}
+.annual-subject>summary span{float:right;font-size:11px;color:#8390a5}
+.annual-months{padding:4px 16px 16px}
+.annual-month{border-bottom:1px solid #e9ecf4;padding:14px 0}
+.annual-month:last-child{border-bottom:0}
+.annual-month-heading{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.annual-month-heading h3{font-size:13px;color:#586681}
+.annual-month-heading button{padding:7px 10px;font-size:11px}
+.annual-empty-month{color:#9ba4b6;font-size:11px;margin:8px 0}
+.annual-target-row{display:grid;grid-template-columns:minmax(120px,1fr) 155px 120px 26px;gap:10px;align-items:end;margin-top:14px}
+.annual-progress{padding:0 24px 20px}
+.annual-progress h4{font-size:12px;color:#69778d;margin:2px 0 12px}
+.annual-progress>div{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px}
+.annual-progress button{border:1px solid #e3e6f1;border-radius:9px;background:#fafaff;text-align:left;padding:10px;min-width:0}
+.annual-progress button b,.annual-progress button span,.annual-progress button small{display:block;font-size:10px;color:#65728b}
+.annual-progress button span{margin-top:6px;color:#8793a5;font-size:9px}
+.annual-progress button small{margin-top:5px;color:#c15b52}
+.annual-filters{grid-template-columns:1fr 1fr 1fr auto;align-items:end}
+.annual-filters label{font-size:10px;color:#7a879c}
+@media(max-width:800px){.annual-progress>div{grid-template-columns:repeat(3,minmax(0,1fr))}.annual-target-row{grid-template-columns:1fr 1fr 26px}.annual-target-row>label:first-child{grid-column:1/-1}.syllabus-hero{padding:22px;align-items:start;flex-direction:column}.syllabus-stats{grid-template-columns:repeat(2,1fr)}.syllabus-filters{grid-template-columns:1fr 1fr}.syllabus-filters>input{grid-column:1/-1}.syllabus-upload{flex-wrap:wrap}.syllabus-upload input{max-width:100%}.syllabus-card-heading{align-items:start}.syllabus-topic-input{grid-template-columns:18px 1fr 135px 25px;gap:8px}}
+@media(max-width:520px){.syllabus-form-grid,.syllabus-filters{grid-template-columns:1fr}.syllabus-topic-input{grid-template-columns:1fr 35px}.syllabus-topic-input>span{display:none}.syllabus-topic-input>label{grid-column:1}.syllabus-topic-input>button{grid-column:2;grid-row:auto}.syllabus-create{padding:18px}.syllabus-card-heading,.syllabus-list-heading,.syllabus-complete-form{flex-direction:column;align-items:start}.syllabus-topic{padding:18px}.syllabus-card-heading{padding:18px}.syllabus-progress{padding:0 18px 18px}.syllabus-note-form>div{align-items:start;flex-direction:column}.syllabus-notes summary small{display:block;margin:8px 0}.syllabus-stats{gap:10px}.syllabus-stats>div{padding:15px}.syllabus-hero h1{font-size:24px}.syllabus-status{font-size:9px}.syllabus-notes li>div{flex-direction:column;gap:4px}}
+.syllabus-table-scroll { overflow: auto; max-height: 460px; margin: 16px 0; }
+.syllabus-admin .syllabus-hero { background: #fff; border-color: #e1e5f0; border-radius: 14px; padding: 24px; }
+.syllabus-admin .syllabus-card { border-radius: 12px; }
+.syllabus-extra-filters { margin-bottom: 18px; }
+.syllabus-extra-filters > summary { cursor: pointer; color: #605bd4; padding: 8px 0; font-weight: 600; }
+.syllabus-extra-filters[open] > summary { margin-bottom: 10px; }
+.syllabus-topic-details > summary { cursor: pointer; padding: 14px 24px; border-top: 1px solid #eef0f6; color: #605bd4; font-weight: 600; background: #fafaff; }
+.syllabus-table-scroll table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.syllabus-table-scroll th, .syllabus-table-scroll td { padding: 10px; border-bottom: 1px solid #e2e8f0; text-align: left; min-width: 100px; }
+.syllabus-table-scroll th { position: sticky; top: 0; background: #f1f5f9; }
+
+/* Each admin view has its own visual hierarchy and layout. */
+.syllabus-admin{--syllabus-accent:#6366f1;--syllabus-tint:#eef2ff;--syllabus-border:#c7d2fe}
+.syllabus-view-pending{--syllabus-accent:#b45309;--syllabus-tint:#fffbeb;--syllabus-border:#fde68a}
+.syllabus-view-completed{--syllabus-accent:#047857;--syllabus-tint:#ecfdf5;--syllabus-border:#a7f3d0}
+.syllabus-admin .syllabus-hero{background:linear-gradient(115deg,var(--syllabus-tint),#fff);border:1px solid var(--syllabus-border);border-radius:22px;padding:32px}
+.syllabus-admin .syllabus-hero h1{font-size:32px;letter-spacing:-1px;margin:12px 0}
+.syllabus-admin .syllabus-hero p{max-width:620px;font-size:13px}
+.syllabus-admin .syllabus-eyebrow,.syllabus-admin .syllabus-class{color:var(--syllabus-accent)}
+.syllabus-admin .syllabus-primary{background:var(--syllabus-accent);border-color:var(--syllabus-accent)}
+.syllabus-admin .syllabus-primary:hover:not(:disabled){filter:brightness(.9);background:var(--syllabus-accent)}
+.syllabus-view-stats>div{position:relative;border-radius:16px;padding:22px;box-shadow:0 4px 16px #0f172a04}
+.syllabus-view-stats small{display:block;font-size:12px}
+.syllabus-view-stats strong{font-size:30px;letter-spacing:-1px;color:var(--syllabus-accent)}
+.syllabus-stat-index{position:absolute;right:18px;top:18px;color:var(--syllabus-accent);background:var(--syllabus-tint);border-radius:8px;padding:6px 8px;font-size:10px;font-weight:700}
+.syllabus-admin .syllabus-list{background:#f8fafc;border:1px solid #e2e8f0;border-radius:22px;padding:24px}
+.syllabus-admin .syllabus-list-heading h2{font-size:20px}
+.syllabus-admin .syllabus-extra-filters{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:6px 16px}
+.syllabus-admin .syllabus-extra-filters>summary{color:var(--syllabus-accent)}
+.syllabus-view-assigned .syllabus-results{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;align-items:start}
+.syllabus-admin .syllabus-card{border-radius:16px;box-shadow:0 4px 12px #0f172a04;margin-bottom:0;min-width:0}
+.syllabus-view-assigned .syllabus-card-heading{align-items:start;flex-direction:column}
+.syllabus-view-assigned .syllabus-card{border-top:3px solid var(--syllabus-border)}
+.syllabus-admin .syllabus-progress progress{accent-color:var(--syllabus-accent)}
+.syllabus-admin .syllabus-progress progress::-webkit-progress-value{background:var(--syllabus-accent)}
+.syllabus-view-pending .syllabus-results,.syllabus-view-completed .syllabus-results{display:grid;gap:20px}
+.syllabus-view-pending .syllabus-card{border-left:4px solid var(--syllabus-border)}
+.syllabus-view-pending .syllabus-card-heading{background:var(--syllabus-tint);padding-bottom:18px}
+.syllabus-view-pending .syllabus-progress{background:var(--syllabus-tint);padding-top:4px}
+.syllabus-view-pending .syllabus-deadline{color:#92400e;background:#fffbeb;display:inline-flex;padding:6px 8px;border-radius:6px;flex-wrap:wrap}
+.syllabus-view-completed .syllabus-card-heading{background:linear-gradient(100deg,#ecfdf5,#fff);padding-bottom:18px}
+.syllabus-view-completed .syllabus-progress{padding-top:14px}
+.syllabus-view-completed .syllabus-topics{margin:0 24px 20px;border-left:2px solid #a7f3d0}
+.syllabus-view-completed .syllabus-topic{position:relative;margin-left:16px;padding:18px 12px;border-top:1px solid #eef2f6}
+.syllabus-view-completed .syllabus-topic::before{content:"";position:absolute;left:-23px;top:22px;width:10px;height:10px;border-radius:50%;background:#10b981;box-shadow:0 0 0 4px #ecfdf5}
+.syllabus-view-completed .syllabus-completion{color:#047857}
+@media(max-width:900px){.syllabus-view-assigned .syllabus-results{grid-template-columns:1fr}.syllabus-admin .syllabus-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.syllabus-admin .syllabus-hero{padding:22px}.syllabus-admin .syllabus-hero h1{font-size:26px}.syllabus-admin .syllabus-list{padding:14px;border-radius:16px}.syllabus-view-stats>div{padding:16px}.syllabus-stat-index{display:none}.syllabus-view-completed .syllabus-topics{margin:0 14px 14px}.syllabus-progress{flex-wrap:wrap}.syllabus-progress progress{flex-basis:100%}}
+
+/* Teacher lesson planner: subjects first, readable topic cards and compact notes. */
+.syllabus-teacher{max-width:1280px;font-size:14px}
+.syllabus-teacher .syllabus-hero{background:linear-gradient(120deg,#eef2ff,#f0fdfa);padding:32px;border-color:#dce5f4}
+.syllabus-teacher .syllabus-hero h1{font-size:32px;margin:12px 0}
+.syllabus-teacher .syllabus-stats>div{border-radius:16px;box-shadow:0 3px 12px #0f172a04}
+.syllabus-teacher .syllabus-stats small{font-size:12px;color:#64748b}
+.lesson-subjects{margin:28px 0}
+.lesson-section-heading{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:16px}
+.lesson-section-heading p{margin:5px 0;color:#64748b;font-size:12px;line-height:1.6}
+.lesson-subject-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.lesson-subject-card{display:flex;flex-direction:column;align-items:start;gap:10px;background:#fff;border:1px solid #dce3ef;border-radius:16px;text-align:left;padding:20px;color:#334155;transition:border-color .15s,box-shadow .15s}
+.lesson-subject-card:hover,.lesson-subject-card[aria-pressed=true]{border-color:#818cf8;box-shadow:0 4px 18px #6366f115}
+.lesson-subject-card[aria-pressed=true]{background:#f5f5ff}
+.lesson-subject-icon{display:inline-flex;padding:10px;background:#eef2ff;border-radius:12px;color:#6366f1}
+.lesson-subject-card>strong{font-size:17px;overflow-wrap:anywhere}
+.lesson-subject-classes{font-size:12px;color:#64748b;line-height:1.6}
+.lesson-subject-counts{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;width:100%;font-size:11px;color:#64748b;margin-top:4px}
+.lesson-subject-counts b{color:#475569;font-weight:600}
+.lesson-subject-card progress{width:100%;height:6px;accent-color:#6366f1;border:0;border-radius:8px;overflow:hidden}
+.lesson-subject-card progress::-webkit-progress-bar{background:#eef2ff}
+.lesson-subject-card progress::-webkit-progress-value{background:#6366f1}
+.syllabus-teacher .syllabus-list{background:#f8fafc;border:1px solid #e2e8f0;border-radius:20px;padding:24px}
+.syllabus-teacher .syllabus-list-heading h2{font-size:21px}
+.syllabus-teacher .syllabus-list-heading p{font-size:12px}
+.syllabus-teacher .syllabus-filters{grid-template-columns:minmax(0,1fr) 170px 220px}
+.syllabus-teacher .annual-filters{grid-template-columns:1fr 1fr 1fr auto}
+.syllabus-teacher .syllabus-extra-filters{border:1px solid #e2e8f0;border-radius:12px;background:#fff;padding:6px 14px}
+.lesson-clear-filters{display:inline-flex;align-items:center;gap:6px;padding:8px 12px;margin-bottom:12px;background:#eef2ff;border:1px solid #c7d2fe;border-radius:8px;color:#4f46e5;font-size:12px}
+.syllabus-teacher .syllabus-results{display:grid;gap:24px}
+.syllabus-teacher .syllabus-card{margin:0;border-radius:18px;border-color:#dce3ef}
+.syllabus-teacher .syllabus-card-heading{background:linear-gradient(110deg,#f5f5ff,#fff);padding:24px 24px 16px}
+.syllabus-teacher .syllabus-card-heading h3{font-size:24px;margin:8px 0}
+.syllabus-teacher .syllabus-class{display:inline-block;font-size:12px;color:#4f46e5}
+.syllabus-teacher .syllabus-progress{padding-top:14px}
+.syllabus-teacher .syllabus-progress span{font-size:12px;color:#475569}
+.lesson-monthly{border-top:1px solid #eef2f6}
+.lesson-monthly>summary{display:flex;align-items:center;gap:8px;padding:14px 24px;cursor:pointer;color:#64748b;font-size:12px}
+.lesson-monthly[open]>summary{color:#4f46e5}
+.syllabus-teacher .syllabus-topics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;gap:16px;padding:20px;background:#f8fafc}
+.syllabus-teacher .syllabus-topic{padding:20px;background:#fff;border:1px solid #e2e8f0;border-radius:14px;min-width:0}
+.syllabus-teacher .topic-is-complete{border-color:#cce8dc}
+.syllabus-teacher .syllabus-topic-heading h4{font-size:17px;line-height:1.5;margin:6px 0 0;color:#1e293b}
+.syllabus-teacher .syllabus-status{font-size:11px;padding:6px 10px;margin-top:4px}
+.lesson-chapter{display:block;color:#64748b;font-size:11px;font-weight:700;letter-spacing:.5px;overflow-wrap:anywhere}
+.lesson-topic-description{white-space:pre-wrap;overflow-wrap:anywhere;color:#64748b;font-size:13px;line-height:1.75;margin:12px 0}
+.lesson-topic-meta{display:flex;flex-wrap:wrap;gap:16px 24px;padding:14px 0;margin:10px 0;border-top:1px solid #f1f5f9;border-bottom:1px solid #f1f5f9}
+.lesson-topic-meta>div{display:flex;flex-direction:column;gap:6px}
+.lesson-topic-meta>div>span{display:flex;align-items:center;gap:5px;color:#64748b;font-size:11px}
+.lesson-topic-meta strong{color:#334155;font-size:12px;font-weight:600}
+.lesson-topic-meta small{font-size:11px;color:#64748b}
+.lesson-topic-meta .lesson-priority{text-transform:capitalize;padding:4px 8px;border-radius:6px;background:#f1f5f9;align-self:start}
+.lesson-topic-meta .priority-high{background:#fff1f2;color:#be123c}
+.lesson-topic-meta .priority-medium{background:#fffbeb;color:#92400e}
+.lesson-topic-meta .priority-low{background:#eff6ff;color:#1d4ed8}
+.lesson-completion-panel{display:flex;align-items:start;flex-wrap:wrap;gap:10px;background:#ecfdf5;border:1px solid #d1fae5;border-radius:10px;padding:12px;margin:14px 0;color:#047857}
+.lesson-completion-panel>svg{flex-shrink:0;margin-top:2px}
+.lesson-completion-panel>div{min-width:0;flex:1}
+.lesson-completion-panel strong{display:block;font-size:12px;font-weight:600;overflow-wrap:anywhere}
+.lesson-completion-panel time{display:block;color:#46806c;font-size:11px;line-height:1.6;margin-top:5px}
+.lesson-completion-panel .lesson-completion-rewards{display:flex;gap:6px;flex:0 0 100%;flex-wrap:wrap;padding-top:8px;border-top:1px solid #d1fae5}
+.lesson-completion-rewards span{background:#fff;border-radius:6px;padding:5px 8px;font-size:11px;font-weight:600}
+.syllabus-teacher .syllabus-complete-form{flex-wrap:wrap;background:#f5f5ff;border:1px solid #e0e7ff}
+.syllabus-teacher .syllabus-complete-form label{font-size:12px;line-height:1.6}
+.syllabus-teacher .syllabus-notes{border-top:1px solid #f1f5f9;padding-top:14px}
+.syllabus-teacher .syllabus-notes summary{font-size:12px;color:#475569;line-height:1.8}
+.syllabus-teacher .syllabus-notes summary small{display:block;margin:4px 0;color:#64748b}
+.lesson-note-editor{margin-top:14px;border-top:1px solid #eef2f6;padding-top:12px}
+.lesson-note-editor>summary{display:flex;align-items:center;gap:6px;cursor:pointer;color:#4f46e5;font-size:12px;font-weight:600;padding:6px 0}
+.lesson-note-editor .syllabus-note-form{margin-top:12px}
+.lesson-note-editor .syllabus-note-form>div{flex-wrap:wrap}
+.lesson-note-editor .syllabus-note-form small{color:#64748b;line-height:1.6}
+@media(max-width:1000px){.syllabus-teacher .syllabus-topics{grid-template-columns:1fr}}
+@media(max-width:700px){.syllabus-teacher .syllabus-filters,.syllabus-teacher .annual-filters{grid-template-columns:1fr}.syllabus-teacher .syllabus-list{padding:16px}.lesson-section-heading{align-items:start;flex-direction:column}.syllabus-teacher .syllabus-hero{padding:22px}.syllabus-teacher .syllabus-hero h1{font-size:26px}.syllabus-teacher .syllabus-topics{padding:12px}.syllabus-teacher .syllabus-topic{padding:16px}.syllabus-teacher .syllabus-topic-heading{flex-wrap:wrap}}
+
+/* Compact class-wise teacher view. */
+.syllabus-teacher .syllabus-hero{padding:20px 24px;margin-bottom:16px;border-radius:16px}
+.syllabus-teacher .syllabus-hero h1{font-size:26px;margin:8px 0}
+.syllabus-teacher .syllabus-stats{gap:10px;margin-bottom:18px}
+.syllabus-teacher .syllabus-stats>div{padding:12px 16px;border-radius:12px}
+.syllabus-teacher .syllabus-stats strong{font-size:23px;margin-top:4px}
+.lesson-classes{margin-bottom:20px}
+.lesson-classes .lesson-section-heading{margin-bottom:10px}
+.lesson-class-tabs{display:flex;flex-wrap:wrap;gap:8px}
+.lesson-class-tabs button{display:flex;flex-direction:column;gap:5px;padding:10px 16px;background:#fff;border:1px solid #dce3ef;border-radius:10px;color:#334155;text-align:left}
+.lesson-class-tabs button strong{font-size:13px}
+.lesson-class-tabs button span{font-size:11px;color:#64748b}
+.lesson-class-tabs button:hover,.lesson-class-tabs button[aria-pressed=true]{border-color:#818cf8;background:#eef2ff}
+.syllabus-teacher .syllabus-list{padding:18px;border-radius:16px}
+.syllabus-teacher .syllabus-results{gap:16px}
+.lesson-class-group{border:1px solid #dce3ef;background:#fff;border-radius:14px;overflow:hidden;min-width:0}
+.lesson-class-heading{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 18px;background:#eef2ff;border-bottom:1px solid #e0e7ff}
+.lesson-class-heading h3{margin:0;font-size:17px;color:#3730a3}
+.lesson-class-heading>span{font-size:11px;color:#64748b}
+.lesson-class-subject{padding:12px 16px;border-bottom:1px solid #e2e8f0}
+.lesson-class-subject:last-child{border-bottom:0}
+.lesson-class-subject>h4{display:flex;align-items:center;gap:7px;font-size:14px;color:#334155;margin:0 0 8px}
+.lesson-class-subject>h4 svg{color:#6366f1}
+.lesson-plan-caption{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:6px 0 8px;color:#64748b;font-size:11px;line-height:1.5}
+.lesson-plan-caption>span{overflow-wrap:anywhere}
+.lesson-plan-caption .syllabus-secondary{padding:5px 8px;font-size:10px}
+.lesson-topic-row{border:1px solid #e2e8f0;border-radius:9px;margin-top:6px;overflow:hidden}
+.lesson-topic-row>summary{display:flex;align-items:center;gap:12px;padding:10px 12px;cursor:pointer;list-style:none;background:#fff}
+.lesson-topic-row>summary::-webkit-details-marker{display:none}
+.lesson-topic-row>summary:hover{background:#f8fafc}
+.lesson-topic-row[open]>summary{background:#f5f5ff;border-bottom:1px solid #e2e8f0}
+.lesson-row-title{display:flex;align-items:center;gap:8px;flex:1;min-width:0}
+.lesson-row-title>svg{color:#6366f1;flex-shrink:0}
+.lesson-row-title strong{display:block;color:#334155;font-size:13px;line-height:1.5;overflow-wrap:anywhere}
+.lesson-row-title small{display:block;color:#64748b;font-size:10px;line-height:1.5}
+.lesson-row-deadline{font-size:11px;color:#64748b;white-space:nowrap}
+.lesson-row-priority{text-transform:capitalize;font-size:10px;padding:4px 7px;border-radius:6px;background:#f1f5f9;white-space:nowrap}
+.lesson-row-priority.priority-high{color:#be123c;background:#fff1f2}
+.lesson-row-priority.priority-medium{color:#92400e;background:#fffbeb}
+.lesson-row-priority.priority-low{color:#1d4ed8;background:#eff6ff}
+.syllabus-teacher .lesson-topic-row>summary .syllabus-status{font-size:10px;margin:0;padding:4px 8px}
+.lesson-row-expand{font-size:18px;color:#94a3b8;transition:transform .15s}
+.lesson-topic-row[open] .lesson-row-expand{transform:rotate(180deg)}
+.syllabus-teacher .lesson-topic-row>.syllabus-topic{border:0;border-radius:0;padding:14px 16px}
+.syllabus-teacher .lesson-topic-row .syllabus-topic-heading{display:none}
+.syllabus-teacher .lesson-topic-row .lesson-topic-meta{margin:0;padding:10px 0}
+.lesson-compact-plan>.lesson-monthly{margin-top:8px;border:0}
+.lesson-compact-plan>.lesson-monthly>summary{padding:6px 0;font-size:11px}
+.lesson-compact-plan .annual-progress{padding:10px 0}
+@media(max-width:700px){.lesson-class-heading{align-items:start;flex-direction:column;gap:5px;padding:12px}.lesson-class-subject{padding:12px}.lesson-topic-row>summary{flex-wrap:wrap;gap:6px 10px}.lesson-row-title{flex-basis:calc(100% - 30px)}.lesson-row-expand{order:0}.lesson-row-deadline,.lesson-row-priority,.lesson-topic-row>summary .syllabus-status{order:1}.lesson-row-expand{margin-left:auto}.syllabus-teacher .syllabus-list{padding:12px}.syllabus-teacher .syllabus-hero{padding:18px}}
+
+.lesson-status-dropdown{cursor:pointer;min-width:125px;border:1px solid #dbe3f0;border-radius:12px;padding:8px 12px;font:inherit;font-size:12px;font-weight:600}.lesson-status-dropdown:disabled{cursor:wait;opacity:.65}
+
+/* Keep topic controls compact instead of inheriting full-width form fields. */
+.syllabus-page .lesson-topic-row > summary { gap: 12px; }
+.syllabus-page .lesson-topic-row > summary .lesson-row-title { flex: 1 1 0; min-width: 0; }
+.syllabus-page .lesson-row-title > span { min-width: 0; }
+.syllabus-page .lesson-row-title strong { overflow-wrap: break-word; word-break: normal; }
+.syllabus-page .lesson-row-deadline,
+.syllabus-page .lesson-row-priority,
+.syllabus-page .lesson-row-expand { flex: 0 0 auto; }
+.syllabus-page .lesson-topic-row > summary select.lesson-status-dropdown {
+  display: inline-block;
+  flex: 0 0 132px;
+  width: 132px;
+  min-width: 132px;
+  max-width: 132px;
+  height: 36px;
+  margin: 0;
+  padding: 7px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  background: #f1f5f9;
+  color: #475569;
+}
+.syllabus-page .lesson-topic-row > summary select.lesson-status-dropdown.in_progress { background: #eef2ff; color: #4f46e5; border-color: #c7d2fe; }
+.syllabus-page .lesson-topic-row > summary select.lesson-status-dropdown.completed { background: #ecfdf5; color: #047857; border-color: #a7f3d0; }
+@media (max-width: 700px) {
+  .syllabus-page .lesson-topic-row > summary { flex-wrap: wrap; gap: 10px; }
+  .syllabus-page .lesson-topic-row > summary .lesson-row-title { flex: 1 1 calc(100% - 30px); }
+  .syllabus-page .lesson-topic-row > summary select.lesson-status-dropdown { order: 1; margin-left: auto; }
+}
+
+.student-progress-card,.syllabus-documents-card{padding:24px;}
+.syllabus-page .student-progress-card>h2,.syllabus-page .syllabus-documents-card>h2{margin:0 0 8px;}
+.student-progress-card>p,.syllabus-documents-card>p{margin:0 0 20px;color:#64748b;font-size:12px;line-height:1.6;}
+.student-progress-card .syllabus-progress{padding:14px 0;border-top:1px solid #eef2f7;gap:20px;}
+.student-progress-card .syllabus-progress strong{flex:0 1 280px;font-size:12px;line-height:1.6;}
+.student-progress-card .student-progress-empty{padding:16px;background:#f8fafc;border-radius:12px;font-size:12px;margin:0;}
+.student-progress-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;}.student-progress-chips>span{display:inline-flex;align-items:center;gap:7px;border-radius:9px;padding:8px 11px;font-size:11px;}.student-progress-chips .done{background:#ecfdf5;color:#047857;}.student-progress-chips .todo{background:#f1f5f9;color:#475569;}.student-progress-chips .in-progress{background:#eef2ff;color:#4f46e5;}
+.syllabus-documents-card .syllabus-card-heading{padding:18px;background:#f8faff;border:1px solid #e5eaf5;border-radius:14px;margin-top:12px;}
+.syllabus-documents-card .syllabus-card-heading>div{flex:1;min-width:0;}
+.syllabus-documents-card .syllabus-card-heading strong{font-size:13px;line-height:1.6;}
+.syllabus-documents-card .syllabus-card-heading p{font-size:11px;margin-top:6px;overflow-wrap:anywhere;}
+.syllabus-student .syllabus-list{padding:24px;background:#fff;border:1px solid #e1e5f0;border-radius:18px;}
+.syllabus-student .syllabus-extra-filters{padding:14px 16px;background:#f8faff;border:1px solid #e5eaf5;border-radius:12px;margin-bottom:18px;}
+.syllabus-student .syllabus-extra-filters>summary{margin-bottom:12px;}
+.syllabus-student .syllabus-stats>div:nth-child(2){background:#f0fdf4;}.syllabus-student .syllabus-stats>div:nth-child(3){background:#eef2ff;}.syllabus-student .syllabus-stats>div:nth-child(4){background:#fff7ed;}
+@media(max-width:600px){.student-progress-card,.syllabus-documents-card,.syllabus-student .syllabus-list{padding:16px;}.student-progress-card .syllabus-progress{flex-direction:column;align-items:stretch;gap:10px;}.student-progress-card .syllabus-progress strong{flex:auto;}.student-progress-card .syllabus-progress progress{flex:auto;width:100%;}.syllabus-documents-card .syllabus-card-heading{flex-wrap:wrap;gap:14px;}.syllabus-documents-card .syllabus-card-heading>div{flex-basis:100%;}}
