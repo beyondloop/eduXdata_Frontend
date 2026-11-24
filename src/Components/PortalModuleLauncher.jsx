@@ -14,7 +14,11 @@ const adminModules = [
   { label: "Announcements", icon: Megaphone, items: ["Announcements"] },
   { label: "Holiday List", icon: CalendarDays, items: ["Holiday List"] },
   { label: "Documents", icon: FolderOpen, items: ["Documents"] },
+<<<<<<< HEAD
   { label: "Reports", icon: FileText, items: ["Fees Collection Report", "Facility Report", "Expense Report"] },
+=======
+  { label: "Reports", icon: FileText, items: ["Reports"] },
+>>>>>>> 1ab38baeb130a8a02d3b672b9f0e39888dab1fc9
   { label: "Payroll", icon: CircleDollarSign, items: ["Salary"] },
   { label: "Notifications", icon: Bell, items: ["Notifications"] },
   { label: "Separation Portal", icon: UserRoundMinus, items: ["Separation Portal"] },

@@ -16,7 +16,11 @@ const adminPermissionModules = [
   { name: "Announcements", icon: Megaphone, features: ["Announcements"] },
   { name: "Holiday List", icon: CalendarDays, features: ["Holiday List"] },
   { name: "Documents", icon: FolderOpen, features: ["Documents"] },
+<<<<<<< HEAD
   { name: "Reports", icon: FileText, features: ["Reports", "Fees Collection Report"] },
+=======
+  { name: "Reports", icon: FileText, features: ["Reports"] },
+>>>>>>> 1ab38baeb130a8a02d3b672b9f0e39888dab1fc9
   { name: "Payroll", icon: CircleDollarSign, features: ["Salary"] },
   { name: "Notifications", icon: Bell, features: ["Notifications"] },
   { name: "Separation Portal", icon: UserRoundMinus, features: ["Separation Portal"] },
@@ -37,7 +41,11 @@ const studentPermissionModules = [
   { name: "Student portal", icon: LayoutDashboard, features: ["Overview", "Profile", "Attendance", "Timetable", "Assignments", "Examinations", "Syllabus", "Discipline Points", "Study Materials", "Fees"] },
   { name: "Student services", icon: BookOpenCheck, features: ["Announcements", "Notifications", "Leave Management", "Library", "Certificates", "Events", "Holiday List"] },
 ];
+<<<<<<< HEAD
 const subAdminDefaultFeatures = ["Overview", "All Students", "Classes", "Sections", "Student Performance", "Student Documents", "Admission Enquiry", "Student Admission", "Identity Card", "Documents", "Reports", "Fees Collection Report"];
+=======
+const subAdminDefaultFeatures = ["Overview", "All Students", "Classes", "Sections", "Student Performance", "Student Documents", "Admission Enquiry", "Student Admission", "Identity Card", "Documents", "Reports"];
+>>>>>>> 1ab38baeb130a8a02d3b672b9f0e39888dab1fc9
 const modulesForRole = (role) => role === "TEACHER" ? teacherPermissionModules : role === "STUDENT" ? studentPermissionModules : adminPermissionModules;
 const defaultFeaturesForRole = (role) => role === "SUB_ADMIN" ? subAdminDefaultFeatures : role === "TEACHER" || role === "STUDENT"
   ? modulesForRole(role).flatMap((module) => module.features)
