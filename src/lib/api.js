@@ -156,11 +156,7 @@ export function deleteFacilityProduct(productId) { return request(`/admin/facili
 export function getFacilityProductStudents(productId) { return request(`/admin/facility/products/${encodeURIComponent(productId)}/students`); }
 export function getFacilityStudentAssets(studentId) { return request(`/admin/facility/students/${encodeURIComponent(studentId)}/assets`); }
 export function allocateFacilityAssets(studentId, productIds) { return request(`/admin/facility/students/${encodeURIComponent(studentId)}/allocations`, { method: "POST", body: JSON.stringify({ productIds }) }); }
-<<<<<<< HEAD
 export function setFacilityStudentPayment(productId, studentId, paid, paidAt = "") { return request(`/admin/facility/products/${encodeURIComponent(productId)}/students/${encodeURIComponent(studentId)}/payment`, { method: "PUT", body: JSON.stringify({ paid, paidAt: paid ? paidAt : null }) }); }
-=======
-export function setFacilityStudentPayment(productId, studentId, paid) { return request(`/admin/facility/products/${encodeURIComponent(productId)}/students/${encodeURIComponent(studentId)}/payment`, { method: "PUT", body: JSON.stringify({ paid }) }); }
->>>>>>> 1ab38baeb130a8a02d3b672b9f0e39888dab1fc9
 export function allocateFacilityProduct(productId, studentId, quantity) { return request(`/admin/facility/products/${encodeURIComponent(productId)}/allocations`, { method: "POST", body: JSON.stringify({ studentId, quantity }) }); }
 export function getTransportStudents() { return request("/admin/transport/students"); }
 export function createAdmission(student) { return request("/admissions", { method: "POST", body: JSON.stringify(student) }); }

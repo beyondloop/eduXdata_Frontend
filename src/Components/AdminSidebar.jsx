@@ -15,11 +15,7 @@ const sections = [
   { label: "Set Announcement", value: "Announcements", icon: Megaphone },
   { label: "Holiday List", icon: CalendarDays },
   { label: "Documents", icon: FolderOpen },
-<<<<<<< HEAD
   { label: "Reports", icon: FileText, children: ["Fees Collection Report", "Facility Report", "Expense Report"] },
-=======
-  { label: "Reports", icon: FileText },
->>>>>>> 1ab38baeb130a8a02d3b672b9f0e39888dab1fc9
   { label: "Payroll", icon: CircleDollarSign, children: ["Salary"] },
   { label: "Set Notifications", value: "Notifications", icon: Bell },
 ];

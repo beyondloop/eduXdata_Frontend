@@ -46,12 +46,9 @@ import TeacherWorkloadPage from "./Pages/TeacherWorkloadPage";
 import { FeeStructurePage } from "./Pages/FinancialStructuresPage";
 import PayrollPage from "./Pages/PayrollPage";
 import FeeCollectionPage from "./Pages/FeeCollectionPage";
-<<<<<<< HEAD
 import FeesCollectionReportPage from "./Pages/FeesCollectionReportPage";
 import FacilityReportPage from "./Pages/FacilityReportPage";
 import ExpenseReportPage from "./Pages/ExpenseReportPage";
-=======
->>>>>>> 1ab38baeb130a8a02d3b672b9f0e39888dab1fc9
 import AdminApplicationFormPage from "./Pages/AdminApplicationFormPage";
 import StudentAdmissionPage from "./Pages/StudentAdmissionPage";
 import AdmissionEnquiryPage from "./Pages/AdmissionEnquiryPage";
@@ -95,11 +92,7 @@ const studentNavGroups = [
   ]},
 ];
 const NO_PORTAL_FEATURES = [];
-<<<<<<< HEAD
-const SUB_ADMIN_DEFAULT_FEATURES = ["Overview", "All Students", "Classes", "Sections", "Student Performance", "Student Documents", "Admission Enquiry", "Student Admission", "Identity Card", "Documents", "Fees Collection Report", "Facility Report", "Expense Report"];
-=======
-const SUB_ADMIN_DEFAULT_FEATURES = ["Overview", "All Students", "Classes", "Sections", "Student Performance", "Student Documents", "Admission Enquiry", "Student Admission", "Identity Card", "Documents", "Reports"];
->>>>>>> 1ab38baeb130a8a02d3b672b9f0e39888dab1fc9
+const SUB_ADMIN_DEFAULT_FEATURES = ["Overview", "All Students", "Classes", "Sections", "Student Performance", "Student Documents", "Admission Enquiry", "Student Admission", "Identity Card", "Documents", "Reports", "Fees Collection Report", "Facility Report", "Expense Report"];
 
 const stats = [
   { label: "Total students", value: "2,486", change: "+8.2%", tone: "blue", icon: Users },
@@ -607,12 +600,9 @@ function ModulePage({ title, role, icon: Icon, search, onNavigate, user, onUpdat
   if (["Admin", "SubAdmin"].includes(role) && (title === "Facility" || title === "Inventory")) return <FacilityPage inventoryOnly={title === "Inventory"} canDelete={role === "Admin"} />;
   if (["Admin", "SubAdmin"].includes(role) && title === "Transport") return <TransportPage />;
   if (["Admin", "SubAdmin"].includes(role) && title === "Fee Collection") return <FeeCollectionPage user={user} />;
-<<<<<<< HEAD
   if (["Admin", "SubAdmin"].includes(role) && title === "Fees Collection Report") return <FeesCollectionReportPage />;
   if (["Admin", "SubAdmin"].includes(role) && title === "Facility Report") return <FacilityReportPage />;
   if (["Admin", "SubAdmin"].includes(role) && title === "Expense Report") return <ExpenseReportPage />;
-=======
->>>>>>> 1ab38baeb130a8a02d3b672b9f0e39888dab1fc9
   if (["Admin", "SubAdmin"].includes(role) && (title === "Salary Structure" || title === "Salary")) return <PayrollPage admin />;
   if (role === "Teacher" && title === "Salary Slips") return <PayrollPage />;
   if (role === "Admin" && title === "Separation Portal") return <SeparationPortalPage />;

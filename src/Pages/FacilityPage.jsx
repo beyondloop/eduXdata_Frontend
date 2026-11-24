@@ -103,12 +103,8 @@ function AllocationStudentsPage({ product, onChanged }) {
   const Icon = productIcon(product.category);
   const updatePayment = async (student) => {
     setBusyStudent(student.id); setError("");
-<<<<<<< HEAD
     const isMarkingPaid = !student.paid;
     try { await setFacilityStudentPayment(product.id, student.id, isMarkingPaid, isMarkingPaid ? new Date().toISOString() : ""); setRevision((value) => value + 1); onChanged(); }
-=======
-    try { await setFacilityStudentPayment(product.id, student.id, !student.paid); setRevision((value) => value + 1); onChanged(); }
->>>>>>> 1ab38baeb130a8a02d3b672b9f0e39888dab1fc9
     catch (failure) { setError(failure.message || "Unable to update payment status."); }
     finally { setBusyStudent(""); }
   };
@@ -117,11 +113,7 @@ function AllocationStudentsPage({ product, onChanged }) {
     {error && <p className="auth-error" role="alert">{error}</p>}
     <div className="facility-student-filters"><label className="facility-student-search"><Search size={16}/><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Find by student, roll number, or phone" /></label><select value={classFilter} onChange={(event) => { setClassFilter(event.target.value); setSectionFilter(""); }}><option value="">All classes</option>{classes.map((className) => <option key={className}>{className}</option>)}</select><select value={sectionFilter} onChange={(event) => setSectionFilter(event.target.value)}><option value="">All sections</option>{sections.map((section) => <option key={section}>{section}</option>)}</select></div>
     <div className="facility-student-list"><table><thead><tr><th>Student</th><th>Class / section</th><th>Roll number</th><th>Phone</th><th>Payment done</th><th>Allocated</th><th></th></tr></thead><tbody>{visibleStudents.map((student) => { const allocated = student.allocated === true || Number(student.allocated_quantity) > 0; const canAllocate = student.paid && !allocated && Number(product.available_quantity) > 0; const statusClass = allocated ? "allocated" : !student.paid ? "unpaid" : ""; return <tr key={student.id}><td><b>{student.display_name}</b><small>{student.user_id}</small></td><td>{student.class_name || "—"}{student.section_name ? ` · ${student.section_name}` : ""}</td><td>{student.roll_number || "—"}</td><td>{student.parent_contact_number || "—"}</td><td><button type="button" className={`facility-payment-pill ${student.paid ? "paid" : "unpaid"}`} disabled={busyStudent === student.id || allocated} title={allocated ? "Item already allocated" : "Click to update payment status"} onClick={() => updatePayment(student)}>{student.paid ? <><Check size={12}/> Yes</> : "No · mark paid"}</button></td><td><span className={`facility-allocated-status ${allocated ? "yes" : "no"}`}>{allocated ? "Yes" : "No"}</span></td><td><button type="button" className={`primary-btn facility-allocate-button ${statusClass}`} disabled={!canAllocate} onClick={() => setIssueStudent(student)}>{allocated ? "Allocated" : student.paid ? "Allocate" : "Unpaid"}</button></td></tr>; })}{!visibleStudents.length && <tr><td colSpan="7" className="facility-no-students">No students match these filters.</td></tr>}</tbody></table></div>
-<<<<<<< HEAD
     <footer><span>Only paid, unallocated items can be issued. Payment date and time are recorded when a payment is marked paid.</span></footer>
-=======
-    <footer><span>Only paid, unallocated items can be issued.</span></footer>
->>>>>>> 1ab38baeb130a8a02d3b672b9f0e39888dab1fc9
     {issueStudent && <AssetIssueModal student={issueStudent} selectedProduct={product} onClose={() => setIssueStudent(null)} onComplete={() => { setIssueStudent(null); setRevision((value) => value + 1); onChanged(); }} />}
   </section>;
 }
