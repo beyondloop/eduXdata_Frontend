@@ -10,6 +10,7 @@
 .class-section-form h2 { flex-basis: 100%; }
 .class-section-form label { display: grid; gap: 8px; flex: 1; min-width: 170px; font-size: 14px; }
 .class-section-form input, .class-section-form select { padding: 11px 12px; border: 1px solid #d0d5dd; border-radius: 8px; font: inherit; background: white; width: 100%; }
+.class-section-form label small { color: #667085; font-size: 12px; line-height: 1.35; }
 .class-section-form button { padding: 12px 20px; background: #4f46e5; color: white; border: 0; border-radius: 8px; cursor: pointer; }
 .class-section-form button:disabled { opacity: .55; cursor: default; }
 .class-section-list { overflow-x: auto; }
@@ -17,5 +18,6 @@
 .class-section-list th, .class-section-list td { padding: 14px; border-bottom: 1px solid #eaecf0; white-space: nowrap; }
 .class-section-list th { color: #667085; background: #f9fafb; font-size: 13px; }
 .class-section-status { color: #067647; background: #ecfdf3; border-radius: 20px; padding: 5px 10px; font-size: 12px; }
+.class-delete { display: grid; place-items: center; width: 30px; height: 30px; border: 1px solid #fecdd3; border-radius: 8px; background: #fff1f2; color: #be123c; cursor: pointer; }.class-delete:hover { background: #ffe4e6; }.class-delete:disabled { opacity: .55; cursor: wait; }
 .class-section-page .class-section-error { color: #b42318; margin: 0; }
 .class-section-page .class-section-success { color: #067647; margin: 0; }

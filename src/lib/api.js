@@ -4,6 +4,7 @@ export function getSyllabusSubjects() { return request('/syllabus-subjects'); }
 export function saveSyllabusSubjects(entry) { return request('/syllabus-subjects', { method: 'PUT', body: JSON.stringify(entry) }); }
 export function getSections() { return request('/sections'); }
 export function createClass(entry) { return request('/classes', { method: 'POST', body: JSON.stringify(entry) }); }
+export function deleteClass(id) { return request(`/classes/${encodeURIComponent(id)}`, { method: 'DELETE' }); }
 export function createSection(entry) { return request('/sections', { method: 'POST', body: JSON.stringify(entry) }); }
 export function getSyllabuses() { return request('/syllabuses'); }
 export function getSyllabusDocuments() { return request('/syllabuses/documents'); }

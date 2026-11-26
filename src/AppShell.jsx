@@ -587,7 +587,7 @@ function ModulePage({ title, role, icon: Icon, search, onNavigate, user, onUpdat
   if (["Admin", "SubAdmin"].includes(role) && adminDatasets[title]) return <AdminRecordsPage key={title} title={title} students={adminStudents} />;
   if (role === "Admin" && title === "Manual Correction") return <TeacherAttendancePage students={adminStudents} error={studentError} portalRole="Admin" />;
   if (["Admin", "SubAdmin"].includes(role) && title === "Students") return <AdminStudentsPage students={adminStudents} error={studentError} onSelect={onSelect} />;
-  if (["Admin", "SubAdmin"].includes(role) && ["Classes", "Sections"].includes(title)) return <AdminClassesSectionsPage key={title} mode={title} />;
+  if (["Admin", "SubAdmin"].includes(role) && ["Classes", "Sections"].includes(title)) return <AdminClassesSectionsPage key={title} mode={title} canEdit={role === "Admin"} />;
   if (role === "Admin" && title === "Teacher Performance") return <TeacherPerformancePage />;
   if ((role === "Admin" && ["Syllabus Management", "Syllabus", "Assigned Syllabus", "Pending", "Completed"].includes(title)) || (role === "Teacher" && title === "Lesson Planner") || (role === "Student" && title === "Syllabus")) return <SyllabusPage key={`${role}-${title}`} role={role} view={title} />;
   if (title === "Discipline Points") return <DisciplinePage role={role} />;
